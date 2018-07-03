@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('code checkout') {
       steps {
-        echo 'Code check out successfully'
+        git(url: 'https://github.com/PrashantGitRepo/TestRepo.git', branch: 'master', poll: true)
       }
     }
     stage('code build') {
